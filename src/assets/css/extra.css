@@ -1,0 +1,115 @@
+/* Extra styles for scrollable columns and button visibility */
+
+._left_sidebar_scroll {
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+._right_sidebar_scroll {
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+._middle_content_scroll {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+/* Ensure the parent layouts don't override the scroll */
+._layout_left_sidebar_wrap, ._layout_right_sidebar_wrap, ._layout_middle_inner {
+    height: auto !important;
+    overflow: visible !important;
+}
+
+/* Ensure buttons are visible and match design */
+._feed_inner_timeline_reaction_link span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-weight: 500;
+}
+
+._feed_reaction_active ._feed_inner_timeline_reaction_link span {
+    color: #1890FF;
+}
+
+/* Reusable SearchInput styles */
+._reusable_search_wrap {
+    position: relative;
+    width: 100%;
+}
+
+._reusable_search_svg {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+._reusable_search_inpt {
+    background: var(--bg3) !important;
+    border: 1px solid var(--bg3) !important;
+    border-radius: 32px !important;
+    height: 40px !important;
+    padding: 7px 47px !important;
+    width: 100% !important;
+}
+
+._reusable_search_inpt:hover {
+    border: 1px solid var(--color5) !important;
+}
+
+/* Comments Section Styling */
+._feed_comment_list {
+    margin-bottom: 20px;
+    padding: 0 24px;
+}
+
+._feed_comment_item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+._feed_comment_author_avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+._feed_comment_bubble {
+    background: #F0F2F5;
+    padding: 8px 12px;
+    border-radius: 16px;
+    max-width: 85%;
+}
+
+._feed_comment_author_name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #050505;
+    margin-bottom: 2px;
+}
+
+._feed_comment_text {
+    font-size: 13px;
+    color: #050505;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+._feed_comment_timestamp {
+    font-size: 11px;
+    color: #65676B;
+    margin-top: 2px;
+    padding-left: 12px;
+}

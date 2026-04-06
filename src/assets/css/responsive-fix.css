@@ -1,0 +1,139 @@
+
+/* Custom Responsive Fixes */
+
+/* 1. Fix sidebars and grid overlapping on mobile/tablet */
+@media (max-width: 991px) {
+  ._left_sidebar_scroll, ._right_sidebar_scroll {
+    display: none !important;
+  }
+  
+  ._middle_content_scroll {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  ._layout_middle_inner {
+    height: auto !important;
+    padding-bottom: 20px !important;
+  }
+
+  /* Force 100% width ONLY on small screens to restore desktop layout */
+  ._layout_main_wrapper, 
+  .container._custom_container, 
+  .row, 
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  ._inpt1 {
+      width: 100% !important;
+  }
+  
+  .MuiFormControl-root {
+      width: 100% !important;
+  }
+}
+
+/* 3. Fix sticky header icons overlapping on mobile */
+@media (max-width: 991px) {
+  ._header_nav {
+    display: flex !important; 
+    flex-wrap: wrap;
+    height: auto !important;
+    padding: 10px 0 !important;
+  }
+
+  .navbar-toggler {
+    display: block !important;
+    border-color: rgba(0,0,0,0.1) !important;
+  }
+
+  .navbar-collapse {
+    width: 100%;
+    margin-top: 10px;
+    background: var(--bg2);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 15px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  ._header_form {
+     margin: 10px 0 !important;
+     width: 100%;
+  }
+
+  ._header_nav_list {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0 !important;
+    padding: 0 !important;
+  }
+  
+  ._header_nav_item {
+      margin: 0 !important;
+  }
+
+  ._header_nav_profile {
+    display: flex !important;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0 !important;
+  }
+  
+  ._header_nav_link {
+      padding: 10px !important;
+  }
+
+  ._header_nav_profile_image {
+      margin-right: 10px;
+  }
+}
+
+/* 4. Ensure Create Post area looks good on mobile */
+@media (max-width: 575px) {
+  ._feed_inner_text_area {
+    padding: 12px !important;
+  }
+  
+  ._feed_inner_text_area_box_image {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+/* 5. Fix Dropdown visibility and positioning */
+._nav_profile_dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 200px;
+    background: var(--bg2);
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    z-index: 1050;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+._profile_dropdown {
+    transition: all 0.2s ease;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+._profile_dropdown._show {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
